@@ -10,13 +10,17 @@ namespace ActorsRazorPages.Pages.Actors
 {
     public class IndexModel : PageModel
     {
-        public IList<Actor> Actors;
+        public IList<Actor> Actors { get; set; }
 
         private IData _data;
 
-        public void OnGet(IData data)
+        public IndexModel(IData data)
         {
             _data = data;
+        }
+
+        public void OnGet()
+        {
             Actors = _data.ActorsInitializeData();
         }
     }
