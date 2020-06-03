@@ -8,10 +8,10 @@ namespace ActorsRazorPages.Models
 {
     public interface IData
     {
-        public List<Actor> ActorsList { get; set; }
+        List<Actor> ActorsList { get; set; }
 
-        public List<Actor> ActorsInitializeData();
-        public Actor GetActorById(int? id);
+        List<Actor> ActorsInitializeData();
+        Actor GetActorById(int? id);
 
     }
 }
